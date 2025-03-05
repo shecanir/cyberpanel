@@ -1295,6 +1295,12 @@ if ! grep -q "pid_max" /etc/rc.local 2>/dev/null ; then
   elif [[ "$Server_Provider" = "Alibaba Cloud" ]] ; then
     echo -e "nameserver 100.100.2.136" > /etc/resolv.conf
     echo -e "nameserver 100.100.2.138" >> /etc/resolv.conf
+  elif [[ "$Server_Provider" = "Shecan" ]] ; then
+    echo -e "nameserver 178.22.122.100" > /etc/resolv.conf
+    echo -e "nameserver 185.51.200.2" >> /etc/resolv.conf
+  elif [[ "$Server_Provider" = "Shecan Pro" ]] ; then
+    echo -e "nameserver 178.22.122.101" > /etc/resolv.conf
+    echo -e "nameserver 185.51.200.1" >> /etc/resolv.conf
   else
     echo -e "nameserver 1.1.1.1" > /etc/resolv.conf
     echo -e "nameserver 8.8.8.8" >> /etc/resolv.conf
